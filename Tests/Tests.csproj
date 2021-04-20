@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Content\img\key.png" />
+    <None Remove="Content\img\Икнонка компьютера .png" />
+    <None Remove="Content\img\человечек.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Content\img\key.png" />
+    <Resource Include="Content\img\Икнонка компьютера .png" />
+    <Resource Include="Content\img\человечек.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+  </ItemGroup>
+
+</Project>
