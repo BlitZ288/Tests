@@ -207,8 +207,9 @@
                 </FlowDocument>
             </RichTextBox>
         </Border>
-        <Label Content="Computer training" Margin="234,115,44,433" Foreground="White" FontSize="36" />
-        <RichTextBox Style="{DynamicResource RichTextBoxStyle_Login}" x:Name="RichTextbox_Registration_Paswword"  RenderTransformOrigin="0.493,0.607" Margin="74,404,74,210" Height="49px" >
+        <Label Content="Computer
+training" Margin="234,115,44,433" Foreground="White" FontSize="36" />
+        <RichTextBox Style="{DynamicResource RichTextBoxStyle_Login}" x:Name="RichTextbox_Registration_Paswword"  RenderTransformOrigin="0.493,0.607" Margin="74,399,74,212" Height="49px" Background="White" >
             <FlowDocument >
                 <Paragraph Padding="0,10,5,0">
                     <Run Text=""></Run>

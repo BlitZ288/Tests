@@ -33,35 +33,46 @@ namespace Tests
 
             }
         }
-        private void Login_User_Click(object sender, RoutedEventArgs e)
-        {///Избавить точно от этого 
-           
 
-
-        }
-
-        
 
         private void Back_Button_Click_1(object sender, RoutedEventArgs e)
         {
             this.Close();
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
-
         }
 
         private void Register_Button_Click(object sender, RoutedEventArgs e)
         {
+            bool flag = true;
+        
             string richText = new TextRange(RichTextbox_login.Document.ContentStart, RichTextbox_login.Document.ContentEnd).Text;
-            string logintext = richText.Replace(Environment.NewLine, "");
-
-            string richText2 = new TextRange(RichTextbox_Registration_Paswword.Document.ContentStart, RichTextbox_Registration_Paswword.Document.ContentEnd).Text;
-            string passwordtext = richText2.Replace(Environment.NewLine, "");
-            User user = new User(logintext, passwordtext);
-            if (user.Check_Register(user))
+            string logintext = richText.Replace(Environment.NewLine, " ");
+            string richText2 = new TextRange(RichTextbox_Registration_Paswword.Document.ContentStart, RichTextbox_Registration_Paswword.Document.ContentEnd).Text;            
+            string passwordtext = richText2.Replace(Environment.NewLine, " ");
+            if (logintext.Length<=3 )
             {
-                MessageBox.Show("Успешный вход");
+                MessageBox.Show("Вы не корректные данные в логине");
+                flag = false;
+                RichTextbox_login.BorderBrush = Brushes.Red;
             }
+            if(passwordtext.Length <= 3)
+            {
+                MessageBox.Show("Вы не корректные данные в пароле");
+                flag = false;
+                RichTextbox_Registration_Paswword.BorderBrush = Brushes.Red;
+            }
+            if (flag)
+            {
+                User user = new User(logintext, passwordtext);
+                if (user.Check_Register(user))
+                {
+                    user.AddUser(user);
+                    MessageBox.Show("Успешная Регистрация");
+                }
+            }
+            
+           
         }
     }
 }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tests"
         mc:Ignorable="d"
-        Title="Computer training" AllowsTransparency="True" Height="660" Width="450" ResizeMode="CanResizeWithGrip"   WindowStyle="None" Background="{x:Null}" MouseLeftButtonDown="dreawme">
+        Title="Computer training" AllowsTransparency="True" Height="660" Width="450" ResizeMode="NoResize"   WindowStyle="None" Background="{x:Null}" MouseLeftButtonDown="dreawme">
     <Window.Resources>
         <SolidColorBrush x:Key="TextBox.Static.Border" Color="#FFABAdB3"/>
         <SolidColorBrush x:Key="TextBox.MouseOver.Border" Color="#FF7EB4EA"/>
@@ -200,15 +200,14 @@
 
                 <FlowDocument >
 
-                    <Paragraph Margin="0,0,0,0" Padding="0,10,5,0">
+                    <Paragraph Margin="0,0,0,0" Padding="0,50,5,0">
                         <Image Height="24" Stretch="Fill" Source="/Content/img/человечек.png" Width="21" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
 
                     </Paragraph>
                 </FlowDocument>
             </RichTextBox>
         </Border>
-        <Label  Content="Computer
-                training" Margin="0,116,29,0" Foreground="White" FontSize="36" HorizontalAlignment="Right" VerticalAlignment="Top" Width="186" RenderTransformOrigin="0.553,0.567" Height="114" />
+        <Label  Content="Computer training" Margin="0,46,77,0" Foreground="White" FontSize="36" HorizontalAlignment="Right" VerticalAlignment="Top" Width="Auto" RenderTransformOrigin="0.553,0.567" Height="Auto" />
         <RichTextBox Style="{DynamicResource RichTextBoxStyle_Login}" x:Name="RichTextbox_login_Copy"  RenderTransformOrigin="0.493,0.607" Margin="74,404,74,210" Height="49px" >
 
             <FlowDocument >
